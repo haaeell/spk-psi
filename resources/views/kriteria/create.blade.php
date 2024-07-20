@@ -1,0 +1,52 @@
+@extends('layouts.app')
+@section('content')
+<section class="section dashboard">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <section class="section">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <form  action="{{ route('kriteria.store') }}" method="post" enctype="multipart/form-data">
+                      @csrf
+                      <div class="row mb-3">
+                        <label for="kode_kriteria" class="col-sm-2 col-form-label">Kode</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="kode_kriteria" id="kode_kriteria" required />
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="nama_kriteria" class="col-sm-2 col-form-label">Nama Kriteria</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="nama_kriteria" id="nama_kriteria" required></input>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="jenis_kriteria" class="col-sm-2 col-form-label">Jenis</label>
+                        <div class="col-sm-10">
+                          <select class="form-select" name="jenis_kriteria" id="jenis_kriteria" required>
+                            <option value="">Pilih Jenis</option>
+                            <option value="benefit">Benefit</option>
+                            <option value="cost">Cost</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <button type="submit" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Tambah Kriteria</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+</section>
+@endsection
