@@ -115,7 +115,7 @@ public function simpanPerhitungan()
         $mean = [];
         $jumlahSiswa = count($normalisasi);
 
-        // Hitung mean untuk setiap kriteria
+        // Hitung mean untuk setiap kriteriaa
         foreach ($normalisasi as $nilaiKriteria) {
             foreach ($nilaiKriteria as $kriteria_id => $nilai) {
                 if (!isset($mean[$kriteria_id])) {
